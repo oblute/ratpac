@@ -31,6 +31,7 @@ ETL Helpful Links
 - [github.com/awesomedata](https://github.com/awesomedata/awesome-public-datasets#naturallanguage) 
 - [medium.com/@dataturks](https://medium.com/@dataturks/rare-text-classification-open-datasets-9d340c8c508e)
 - [archive.org](https://archive.org/details/datasets?and%5B%5D=corpus&sin=)
+- [paperswithcode.com](https://paperswithcode.com/area/natural-language-processing)
 
 #### 4. Machine Learning Guides/Articles:
 
