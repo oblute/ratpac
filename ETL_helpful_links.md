@@ -21,6 +21,7 @@ ETL Helpful Links
 - Introduction to Word Vectors: [medium.com](https://medium.com/@jayeshbahire/introduction-to-word-vectors-ea1d4e4b84bf)
 
 #### 3. Data Sources We Like:
+- [www.kaggle.com](https://www.kaggle.com/datasets)
 - [kevinchai.net](http://kevinchai.net/datasets)
 - [github.com/niderhoff](https://github.com/niderhoff/nlp-datasets)
 - [datasetlist.com](https://www.datasetlist.com)
