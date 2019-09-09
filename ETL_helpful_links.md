@@ -19,6 +19,7 @@ ETL Helpful Links
 - Word Embedding with Keras: [towardsdatascience.com](https://towardsdatascience.com/machine-learning-word-embedding-sentiment-classification-using-keras-b83c28087456) 
 - Word Embedding with Word2Vec: [towardsdatascience.com](https://towardsdatascience.com/introduction-to-word-embedding-and-word2vec-652d0c2060fa) 
 - Introduction to Word Vectors: [medium.com](https://medium.com/@jayeshbahire/introduction-to-word-vectors-ea1d4e4b84bf)
+- NLP's Clever Hans moment has arrived: [thegradient.pub](https://thegradient.pub/nlps-clever-hans-moment-has-arrived/)
 
 #### 3. Data Sources We Like:
 - [kaggle.com](https://www.kaggle.com/datasets)
