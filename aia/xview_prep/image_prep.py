@@ -11,23 +11,16 @@ from PIL import Image
 # image directory (for bulk processing)
 # path to xview_dir
 chip_dir = "/Users/eddiebedada/datasets/xview/"
-
 # path to train_dir
 img_dir = os.path.join(chip_dir, 'train_images/')
-
 # test with one image
 src = os.path.join(chip_dir, 'train_images/2160.tif')
-
 # output_image_path
 image_path = './output/train_images/'
-
 # output path to xview bboxes for each image
 xview_labels_path = './output/xview_labels/'
-
 # output path to label converted to yolo format
-
 yolo_labels_path = './output/yolo_labels/'
-
 # bbox file extension
 bboxes_text = 'bboxes.txt'
 
@@ -79,6 +72,7 @@ def get_names_for_classes(txt_file):
 
 
 def chip_one_image(src, json_file):
+
     img = Image.open(src)
     arr = np.array(img)
     coords, classes = get_labels_for_chip(src, json_file)
