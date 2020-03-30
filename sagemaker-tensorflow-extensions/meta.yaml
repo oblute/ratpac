@@ -1,0 +1,85 @@
+{% set name = "sagemaker-tensorflow-extensions" %}
+{% set version = "1.3.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/aws/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: 2b433eb3de4646760b204561414607d0b2127c8703807f615b1cce7ff4443967
+  patches:
+    - setup_cmake_change.patch
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
+  skip: True  # [(win) or (x86_64)]
+  # missing_dso_whitelist:
+  #   - /lib64/libc.so.6
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - cmake
+    - tensorflow <=1.12
+    # - libcurl
+    # - curl
+    - sagemaker-python-sdk
+    # - setuptools
+    # - boto3
+    # - docker-compose
+    # - glib
+    - protobuf >=3.6.0
+  host:
+    - pip
+    - python <=3.6
+    - tensorflow <=1.12
+    - sagemaker-python-sdk
+    # - setuptools
+    # - libcurl
+    # - curl
+    # - boto3
+    # - docker-compose
+    # # - zlib
+    # - glib
+    - protobuf >=3.6.0
+  run:
+    - python <=3.6
+    - tensorflow <=1.12
+    - sagemaker-python-sdk
+    # - setuptools
+    # - libcurl
+    # - curl
+    # - boto3
+    # - docker-compose
+    # - zlib
+    # - glib
+    - protobuf >=3.6.0
+
+test:
+  requires:
+    - tox
+    - flake8
+    - pytest
+    - sagemaker-python-sdk
+    - docker-compose
+    - boto3
+    - mock
+  imports:
+    - sagemaker_tensorflow
+
+about:
+  home: https://github.com/aws/sagemaker-tensorflow-extensions
+  license: Apache-2.0
+  license_family: APACHE
+  license_file: LICENSE
+  summary: "Amazon Sagemaker specific TensorFlow extensions."
+  doc_url: https://sagemaker.readthedocs.io/en/stable/using_tf.html
+  dev_url: https://github.com/aws/sagemaker-tensorflow-extensions
+
+extra:
+  recipe-maintainers:
+    - oblute
+    - rluria14
+    - benhuff
