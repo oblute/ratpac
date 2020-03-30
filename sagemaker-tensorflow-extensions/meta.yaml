@@ -14,7 +14,7 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
-  skip: True  # [(win) or (x86_64)]
+  skip: True  # [win]
   # missing_dso_whitelist:
   #   - /lib64/libc.so.6
 
